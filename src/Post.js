@@ -47,7 +47,7 @@ export default function Post() {
     //// 2. body => data & JSON(string)
     //// 3. header => JSON
 
-    fetch(${API}/post, {
+    fetch(`${API}/post`, {
       method: "POST",
       body: JSON.stringify(newMovie),
       headers: { "Content-type": "application/json" },
@@ -72,7 +72,7 @@ export default function Post() {
       />
       <TextField
         id="outlined-basic"
-        label="Poster"
+        label="image"
         variant="outlined"
         value={formik.values.poster}
         onChange={formik.handleChange}
@@ -84,7 +84,7 @@ export default function Post() {
       />
       <TextField
         id="outlined-basic"
-        label="Trailer"
+        label="About"
         variant="outlined"
         value={formik.values.trailer}
         onChange={formik.handleChange}
@@ -96,7 +96,7 @@ export default function Post() {
       />
       <TextField
         id="outlined-basic"
-        label="Rating"
+        label="Points"
         variant="outlined"
         value={formik.values.rating}
         onChange={formik.handleChange}

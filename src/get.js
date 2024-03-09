@@ -25,7 +25,7 @@ export default function Get({ list , getData}) {
             let ask = window.confirm("This Data will delete")
             if (ask){
               getData()
-                let resDelete =await axios.delete(${API}/delete/${id});
+                let resDelete =await axios.delete(`${API}/delete/${i}`);
                 console.log(resDelete)        
             }
     };
